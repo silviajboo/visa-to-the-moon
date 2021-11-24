@@ -1,0 +1,36 @@
+html, body {
+    background-color: $c-main100;
+    color: $c-white;
+    font-family: $t-secondary;
+    font-weight: 400;
+    text-size-adjust: 100%;
+}
+
+h1 {
+    color: $c-white;
+    display: inline-block;
+    font-family: $t-default;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 16px;
+    width: 100%;
+
+    @include breakpoint($s1024) { 
+        font-size: 24px;
+        line-height: 30px; 
+    }
+}
+
+b, strong { font-weight: 700; }
+i, em { font-style: italic; }
+
+p {
+    font-size: 15px;
+    line-height: 20px;
+
+    @include breakpoint($s1024) { 
+        font-size: 16px;
+        line-height: 25px; 
+    }
+}
