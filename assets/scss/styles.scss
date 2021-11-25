@@ -1,9 +1,11 @@
 // Generic
 @import './settings/colors';
 @import './settings/medias';
+@import './utilities/basics';
 @import './utilities/functions';
 @import './settings/typography';
 @import './generic/base';
 @import './generic/typography';
 
 // Components
+@import './components/background';
