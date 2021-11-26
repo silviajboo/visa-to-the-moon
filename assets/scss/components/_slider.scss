@@ -1,0 +1,30 @@
+.slider {
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: $s1140;
+  position: relative;
+  z-index: 1;
+  
+  &__container {
+    padding: 40px 20px;
+
+    @include breakpoint($s768) {
+        padding: 40px;
+      }
+  }
+
+  &__button {
+    background-color: $c-black;
+    bottom: 0;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+
+    @include breakpoint($s768) {
+      background-color: transparent;
+      display: inline-block;
+      padding: 0 40px;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+input[type="submit"],
+button.button {
+    display: block;
+    text-align: center;
+}
+
+button,
+[role="button"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    appearance: none;
+    background-color: $c-primary100;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 100%;
+    padding: 16px 12px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+
+    * { pointer-events: none; }
+
+    @include breakpoint($s480) { width: auto; }
+}
+
+.button {
+    align-items: center;
+    appearance: none;
+    border: none;
+    color: $c-white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: top;
+    width: 100%;
+    z-index: 1;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    @include breakpoint($s480) {
+        min-width: 200px;
+        width: auto;
+    }
+    
+    @include hover {
+        color: $c-white;
+
+        &::before { opacity: 1; }
+        &::after { opacity: 0; }
+    }
+}
+
+button:disabled,
+.button:disabled,
+.button--state-disabled {
+    background: none;
+    cursor: not-allowed;
+    pointer-events: none;
+}
