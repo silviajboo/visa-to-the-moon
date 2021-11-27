@@ -1,3 +1,19 @@
-.u-flex {
-    display: flex;
+.u-hide {
+  display: none !important;
+
+  &--s768 {
+    @include breakpoint($s768) {
+      display: none !important;
+    }
+  }
+}
+
+.u-show {
+  display: block !important;
+
+  &--s768 {
+    @include breakpoint($s768) {
+      display: block !important;
+    }
+  }
 }

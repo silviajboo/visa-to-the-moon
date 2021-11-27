@@ -1,30 +1,193 @@
 .slider {
-  background-color: transparent;
-  margin: 0 auto;
-  max-width: $s1140;
-  position: relative;
-  z-index: 1;
-  
-  &__container {
-    padding: 40px 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
 
     @include breakpoint($s768) {
-        padding: 40px;
-      }
-  }
-
-  &__button {
-    background-color: $c-black;
-    bottom: 0;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-
-    @include breakpoint($s768) {
-      background-color: transparent;
-      display: inline-block;
-      padding: 0 40px;
-      position: relative;
+        flex-direction: row;
     }
-  }
+
+    @include breakpoint($s1024) {
+        padding-top: 10vh;
+    }
+
+    &__info {
+        align-items: center;
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 100%;
+        min-height: 100vh;
+        padding: 50px 60px 100px;
+        z-index: 2;
+
+        @include breakpoint($s768) {
+            display: block;
+            flex-basis: 50%;
+            flex-direction: row;
+            max-width: 50%;
+            min-height: unset;
+            padding: 40px;
+        }
+
+        @include breakpoint($s1024) {
+            flex-basis: 30%;
+            max-width: 30%;
+            padding: 40px 0 0 80px;
+            z-index: 2;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+        width: 160px;
+
+        @include breakpoint($s1024) {
+            margin-bottom: 40px;
+            width: 200px;
+        }
+    }
+
+    &__title {
+        @include breakpoint($s1024) {
+            white-space: nowrap;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        margin-bottom: 15px;
+        position: relative;
+
+        &::before {
+            background-color: $c-primary100;
+            bottom: -6px;
+            content: "";
+            display: block;
+            height: 4px;
+            left: 0;
+            position: absolute;
+            width: 94px;
+        }
+    }
+
+    &__hash {
+      display: inline-block;
+      max-width: 94px;
+    }
+
+    &__items {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column-reverse;
+        max-width: 100%;
+        position: absolute;
+        top: 20vh;
+        width: 100%;
+
+        @include breakpoint($s768) {
+            flex-basis: 50%;
+            flex-direction: column;
+            max-width: 50%;
+            position: relative;
+            top: unset;
+        }
+
+        @include breakpoint($s1024) {
+            flex-basis: 70%;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 70%;
+        }
+    }
+
+    &__controls {
+        background-color: $c-primary400;
+        height: fit-content;
+        left: -100%;
+        padding-left: 40%;
+        position: absolute;
+        top: 55%;
+        width: 110%;
+
+        @include breakpoint($s1024) {
+            left: 30%;
+            padding-left: 0;
+            top: 100%;
+            width: 30%;
+        }
+    }
+
+    &__data {
+        background-color: rgba(9, 32, 32, 0.8);
+        flex-basis: 100%;
+        min-height: 60vh;
+        max-width: 100%;
+        padding: 50px 20px;
+        width: 100%;
+
+        @include breakpoint($s768) {
+            height: auto;
+            min-height: 40vh;
+        }
+
+        @include breakpoint($s1024) {
+            flex-basis: 30%;
+            max-width: 30%;
+            padding: 20px;
+        }
+    }
+
+    &__image {
+        background-image: url("../images/rocket.png");
+        background-size: cover;
+        background-position: 35%;
+        flex-basis: 100%;
+        height: auto;
+        max-width: 100%;
+        min-height: 80vh;
+        width: 100%;
+
+        @include breakpoint($s768) {
+          background-position: 40%;
+          min-height: 50vh;
+        }
+
+        @include breakpoint($s1024) {
+            flex-basis: 40%;
+            max-width: 40%;
+        }
+    }
+
+    &__button {
+        background-color: $c-black;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+
+        @include breakpoint($s768) {
+            background-color: transparent;
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 0;
+            position: relative;
+        }
+    }
+
+    &__prev,
+    &__next {
+        display: inline-block !important;
+        padding: 25px;
+        width: 49%;
+
+        @include hover {
+            color: $c-primary100;
+        }
+    }
 }

@@ -1,14 +1,15 @@
 // Generic
 @import './settings/colors';
 @import './settings/medias';
-@import './utilities/basics';
-@import './utilities/functions';
 @import './utilities/mixins';
+@import './utilities/functions';
+@import './utilities/basics';
 @import './settings/typography';
 @import './generic/base';
 @import './generic/typography';
 
 // Components
 @import './components/background';
-@import './components/button';
+@import './components/buttons';
 @import './components/slider';
+@import './components/loading';

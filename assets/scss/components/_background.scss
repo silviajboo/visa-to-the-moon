@@ -12,6 +12,7 @@
   @include breakpoint($s1024) {
     flex-direction: row;
     height: 100vh;
+    padding-top: 10vh;
   }
 
   &__first,
@@ -25,7 +26,6 @@
 
     @include breakpoint($s1024) {
       height: 70vh;
-      margin-top: 10vh;
     }
   }
 
@@ -50,7 +50,7 @@
 
     @include breakpoint($s1024) {
       background-position: bottom left;
-      width: 70%;
+      width: 65%;
     }
   }
 }

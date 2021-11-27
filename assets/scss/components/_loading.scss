@@ -1,0 +1,28 @@
+.loading {
+  background-color: $c-primary400;
+  padding: 40px;
+  width: 100%;
+
+  .loading-bar {
+    background-color: $c-white;
+    height: 5px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .progress-bar {
+    animation: progress-animation 10s ease-in-out;
+    background-color: $c-primary100;
+    height: 100%;
+    width: 100%;
+  }
+
+  @keyframes progress-animation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
