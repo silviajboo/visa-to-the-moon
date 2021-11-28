@@ -1,28 +1,24 @@
 {
   "dataImages":
     [{
-      "bgImage": "assets/images/background.jpg",
-      "iconTrip": "assets/images/icon_rocket.png",
-      "logo": "assets/images/logo.png",
-      "imageRocket": "assets/images/rocket.jpg",
+      "bgImage": "./images/background.jpg",
+      "iconTrip": "./images/icon_rocket.png",
+      "logo": "./images/logo.png",
+      "imageRocket": "../images/rocket.png",
       "title" : "Visa to the Moon",
       "subtitle" : "Your trip start here",
-      "hash" : "#moontrip #visamoon #moontickets",
+      "hash" : "#moontrip #visamoon",
       "linkprev" : "prev",
-      "linknext" : "next",
-      "easeView" : "view ease"
-
+      "linknext" : "next"
     },{
-      "bgImage": "assets/images/background.jpg",
-      "iconTrip": "assets/images/icon_rocket.png",
-      "logo": "assets/images/logo.png",
-      "imageRocket": "assets/images/rocket.jpg",
-      "title" : "Visa to the Moon",
-      "subtitle" : "Your trip start here",
-      "hash" : "#moontrip #visamoon #moontickets",
+      "bgImage": "./images/background.jpg",
+      "iconTrip": "./images/icon_rocket.png",
+      "logo": "./images/logo.png",
+      "imageRocket": "../images/background_moon.png",
+      "title" : "Let me to the Moon",
+      "subtitle" : "Fly me to the moon",
+      "hash" : "#visamoon #moontickets",
       "linkprev" : "prev",
-      "linknext" : "next",
-      "easeView" : "view ease"
-
+      "linknext" : "next"
     }]
 }

@@ -1,56 +1,60 @@
 .background {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 200vh;
-  left: 0;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  width: 100%;
-
-  @include breakpoint($s1024) {
-    flex-direction: row;
-    height: 100vh;
-    padding-top: 10vh;
-  }
-
-  &__first,
-  &__second {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200vh;
+    left: 0;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
     width: 100%;
 
     @include breakpoint($s768) {
-        height: 50vh;
-      }
+        height: 100vh;
+    }
 
     @include breakpoint($s1024) {
-      height: 70vh;
+        flex-direction: row;
+        height: 100vh;
+        padding-top: 10vh;
     }
-  }
 
-  &__first {
-    background-image: url("../images/rock.jpg");
-    background-position: center left;
-    background-size: cover;
+    &__first,
+    &__second {
+        height: 100vh;
+        width: 100%;
 
-    @include breakpoint($s1024) {
-      width: 30%;
+        @include breakpoint($s768) {
+            height: 50vh;
+        }
+
+        @include breakpoint($s1024) {
+            height: 70vh;
+        }
     }
-  }
 
-  &__second {
-    background-image: url("../images/background.jpg");
-    background-position: 20% bottom;
-    background-size: 300%;
-
-    @include breakpoint($s768) {
+    &__first {
+        background-image: url("../images/rock.jpg");
+        background-position: center left;
         background-size: cover;
-      }
 
-    @include breakpoint($s1024) {
-      background-position: bottom left;
-      width: 65%;
+        @include breakpoint($s1024) {
+            width: 30%;
+        }
     }
-  }
+
+    &__second {
+        background-image: url("../images/background.jpg");
+        background-position: 20% bottom;
+        background-size: 300%;
+
+        @include breakpoint($s768) {
+            background-size: cover;
+        }
+
+        @include breakpoint($s1024) {
+            background-position: bottom left;
+            width: 65%;
+        }
+    }
 }

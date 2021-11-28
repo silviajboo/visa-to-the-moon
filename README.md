@@ -8,8 +8,8 @@ Hi! I'm Silvia and I'm the Front End Developer who has been humming the Frank Si
 4. And now test, test and test! Thank you for your feedback! :metal:
 
 
-# Run in dev mode
+## Run in dev mode
 npm run dev
 
-# Generate production build
+## Generate production build
 npm run build
