@@ -2,11 +2,13 @@
     background-color: transparent;
     display: flex;
     flex-direction: column;
+    min-height: 200vh;
     position: relative;
     z-index: 1;
 
     @include breakpoint($s768) {
         flex-direction: row;
+        min-height: auto;
     }
 
     @include breakpoint($s1024) {
